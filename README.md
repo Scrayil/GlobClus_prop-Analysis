@@ -25,7 +25,7 @@ The graphs included:
 - Bayesian networks (directed)
 
 ## Reporting
-A detailed technical report for the whole analysis can be found [here](https://github.com/Scrayil/GlobClus_prop-Analysis/blob/6d9da4a8c89307bd71ca7926ca1cd14437a27544/report/Globular%20Stars%20Clusters%20-%20Technical%20Report.pdf).  
+A detailed technical report for the whole analysis can be found [here](https://github.com/Scrayil/GlobClus_prop-Analysis/blob/main/report/Globular%20Stars%20Clusters%20-%20Technical%20Report.pdf).  
 If you are interested into the compiled analysis script (html generated report) you can find it rendered [here](https://Scrayil.github.io/GlobClus_prop-Analysis/model_analysis.html) instead.
 
 ## License
