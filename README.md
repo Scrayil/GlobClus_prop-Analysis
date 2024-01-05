@@ -4,7 +4,7 @@ The aim of this project is to analyze globular stars clusters in the Milky Way, 
 The conducted study examined the properties that affect the central velocity dispersion, their impact and the correlations between them.  
 The task was to find an accurate model that could fit the given data ([GlobClus_prop dataset](https://search.r-project.org/CRAN/refmans/astrodatR/html/GlobClus_prop.html))
 and be used to efficiently explain the statistical distribution of the contained records.  
-**Note:** The statistical distribution in this study has been assumed as linear (known beforehand).
+**Note:** The statistical distribution in this study has been assumed as approxymately linear (known beforehand).
 
 ## Study Logic
 ### First phase
