@@ -942,10 +942,10 @@ cor(x12, y) # Extreme positive correlation
 
 # Searching for a formula for the independent model (BIC Forward), based on the
 # general linear model identified as final
-m.dumping.ind <- cmod(~.^1, marginal =c("Mv","log.t", "V.esc","E.B.V", "CSBt"), data = dat, fit = TRUE)
-m.dumping <- stepwise(m.dumping.ind, direction = "forward", k=log(sum(dat))) # BIC forward
-plot(m.dumping)
-print(formula(m.dumping))
+mmug <- cmod(~.^1, marginal =c("Mv","log.t", "V.esc","E.B.V", "CSBt"), data = dat, fit = TRUE)
+mmug_bic <- stepwise(mmug, direction = "forward", k=log(sum(dat))) # BIC forward
+plot(mmug_bic)
+print(formula(mmug_bic))
 print(ciTest(dat, set = c("Mv","log.t", "V.esc","E.B.V", "CSBt")))
 
 set.frame <- data.frame(
@@ -960,15 +960,16 @@ print(cor(set.frame))
 
 # Based on the correlation matrix, removing less significant dependencies (values close to zero)
 # Discarding weak correlations |corr| < 0.5
-m.dumping <- update(m.dumping, list(dedge=~Mv * E.B.V + log.t * Mv + V.esc * log.t + E.B.V * log.t + V.esc * E.B.V + E.B.V * CSBt))
-plot(m.dumping)
-print(formula(m.dumping))
+mmug_bic <- update(mmug_bic, list(dedge=~Mv * E.B.V + log.t * Mv + V.esc * log.t + E.B.V * log.t + V.esc * E.B.V + E.B.V * CSBt))
+plot(mmug_bic)
+print(formula(mmug_bic))
 # Found formula:
 # ~E.B.V + log.t * CSBt + Mv * CSBt * V.esc
 
 # Creating a Bayesian network
-cad.bn <- hc(set.frame)
-plot(cad.bn)
+mbn <- hc(set.frame)
+plot(mbn)
 
 # In this case too, the same correlations between
 # the variables of the final model with their respective directions have been identified.
+
