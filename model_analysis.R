@@ -70,11 +70,11 @@ dat <- GlobClus_prop
 # V.t: Integrated V magnitude (magnitude)
 # CSBt: Central surface brightness (magnitude per square arcsecond)
 
-# FASE 2:
-# PULIZIA DEL DATASET DAI VALORI NAN (CON DATI INCOMPLETI) E ESCLUSIONE DELLA
-# COLONNA DEI NOMI IN QUANTO SUPERFLUA PER LO STUDIO
-dat <- na.omit(dat[,-1]);
-# Primi 5 record del dataset
+# PHASE 2:
+# CLEANING THE DATASET FROM NAN VALUES (WITH INCOMPLETE DATA) AND EXCLUDING
+# THE NAME COLUMN AS IT IS SUPERFLUOUS FOR THE STUDY
+dat <- na.omit(dat[,-1])
+# First 5 records of the dataset
 head(dat, n=5)
 
 # PHASE 3:
@@ -625,8 +625,7 @@ summary(back_bic)
 # BACKWARD (p-value): y ~ x6 + x10 + x12 + x14 + x18 [All extremely significant]
 # FORWARD (p-value): y ~ x6 + x12 + x9 + x11 + x10 [All extremely significant except x9]
 # MIXED (p-value): y ~ x6 + x12 + x11 + x10 [All extremely significant]
-# FORWARD (LIKELIHOODS COMPARISON): y ~ x12 + x9 + x18 + x14 + x11 + x6 + x10 + x5 + x15 + x7 + x2 + 
-# x1 + x3 + x13 + x4 + x17 + x16 + x8
+# FORWARD (LIKELIHOODS COMPARISON): y ~ x12 + x9 + x18 + x14 + x11 + x6 + x10 + x5 + x15 + x7 + x2 + x1 + x3 + x13 + x4 + x17 + x16 + x8
 # FORWARD (AIC): y ~ x12 + x9 + x18 + x14 + x11 + x6 + x10
 # FORWARD (BIC): y ~ x12 + x9 + x18 + x14 + x11
 # BOTH (LIKELIHOODS COMPARISON): y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12 + x13 + x14 + x15 + x16 + x17 + x18
