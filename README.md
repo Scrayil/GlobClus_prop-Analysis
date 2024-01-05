@@ -21,7 +21,7 @@ More specifically, a combination of all the following methods have been used:
 This phase consisted in the evaluation of the model and the correlation analysis between the identified features.  
 It has been carried out by plotting the features' data and analyzing: confidence intervals, correlation matrices, generic linear models, and graphical model representations.  
 The graphs included:
-- Gaussian linear graphs (undirected with updated with a BIC forward stepwise procedure)
+- Gaussian linear graphs (undirected updated with a BIC forward stepwise procedure)
 - Bayesian networks (directed)
 
 ## Reporting
